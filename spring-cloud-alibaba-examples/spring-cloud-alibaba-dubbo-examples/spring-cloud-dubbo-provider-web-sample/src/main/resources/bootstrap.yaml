@@ -24,6 +24,7 @@ eureka:
 
 
 ---
+#  以nacos为配置中心
 spring:
   profiles: nacos
 

@@ -88,7 +88,7 @@ Dubbo Spring Cloud 必要的依赖：
 完成以上步骤之后，下一步则是实现 Dubbo 服务
 
 
-#### 实现 Dubbo 服务
+#### 实现 Dubbo 服务(提供者，dubbo服务暴露方)
 
 `EchoService` 作为暴露的 Dubbo 服务接口，服务提供方 `spring-cloud-dubbo-server-sample` 需要将其实现：
 
@@ -113,7 +113,7 @@ class EchoServiceImpl implements EchoService {
 在暴露 Dubbo 服务方面，推荐开发人员外部化配置的方式，即指定 Java 服务实现类的扫描基准包。
 > Dubbo Spring Cloud 继承了 Dubbo Spring Boot 的外部化配置特性，也可以通过标注 `@DubboComponentScan` 来实现基准包扫描。
 
-同时，Dubbo 远程服务需要暴露网络端口，并设定通讯协议，完整的 YAML 配置如下所示：
+同时，Dubbo 远程服务需要暴露网络端口，并设定通讯协议，完整的 YAML （application.yml）配置如下所示：
 
 ```yaml
 dubbo:

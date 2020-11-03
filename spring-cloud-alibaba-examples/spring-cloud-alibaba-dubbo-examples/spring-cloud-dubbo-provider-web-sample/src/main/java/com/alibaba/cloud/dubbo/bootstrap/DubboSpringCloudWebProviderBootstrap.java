@@ -17,6 +17,7 @@
 package com.alibaba.cloud.dubbo.bootstrap;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
@@ -26,7 +27,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  */
 @EnableDiscoveryClient
-@EnableAutoConfiguration
+@EnableAutoConfiguration // (这个也是可以启动)
+// @SpringBootApplication
 public class DubboSpringCloudWebProviderBootstrap {
 
 	public static void main(String[] args) {

@@ -57,6 +57,9 @@ public class ConsumerApplication {
 		SpringApplication.run(ConsumerApplication.class, args);
 	}
 
+	/**
+	 * @FeignClient 启用feign进行调用 调用的服务名称是：name: service-provider  fallback: 表示异常的处理
+	 */
 	@FeignClient(name = "service-provider", fallback = EchoServiceFallback.class,
 			configuration = FeignConfiguration.class)
 	public interface EchoService {

@@ -164,8 +164,8 @@ class SampleController {
 
 	@RequestMapping("/user")
 	public String simple() {
-		return "Hello Nacos Config!" + "Hello " + userName + " " + age + " [UserConfig]: "
-				+ userConfig + "!" + nacosConfigManager.getConfigService();
+		return "Hello Nacos Config!" + "Hello " + userName + " " + age + " \n[UserConfig]: "
+				+ userConfig + "!\n" + nacosConfigManager.getConfigService();
 	}
 
 	@RequestMapping("/bool")

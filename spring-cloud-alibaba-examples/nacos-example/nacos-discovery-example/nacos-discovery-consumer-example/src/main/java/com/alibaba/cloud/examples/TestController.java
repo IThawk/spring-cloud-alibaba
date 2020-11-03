@@ -59,6 +59,11 @@ public class TestController {
 	// });
 	// }
 
+	/**
+	 * 使用 RestTemplate 进行服务调用
+	 * @param str
+	 * @return
+	 */
 	@GetMapping("/echo-rest/{str}")
 	public String rest(@PathVariable String str) {
 		return restTemplate.getForObject("http://service-provider/echo/" + str,
@@ -80,6 +85,10 @@ public class TestController {
 		return restTemplate1.getForObject("http://service-provider/sleep", String.class);
 	}
 
+	/**
+	 * 使用feign接口调用，在接口中去申明调用服务
+	 * @return
+	 */
 	@GetMapping("/notFound-feign")
 	public String notFound() {
 		return echoService.notFound();
