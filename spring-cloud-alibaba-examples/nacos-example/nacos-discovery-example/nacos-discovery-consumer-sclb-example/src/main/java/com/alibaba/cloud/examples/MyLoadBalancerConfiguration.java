@@ -31,7 +31,7 @@ import org.springframework.core.env.Environment;
  */
 public class MyLoadBalancerConfiguration {
 
-	// @ConditionalOnMissingBean  环境中不存在这个bean 就加载这个bean
+	// @ConditionalOnMissingBean 环境中不存在这个bean 就加载这个bean
 	@Bean
 	@ConditionalOnMissingBean
 	public ReactorLoadBalancer<ServiceInstance> reactorServiceInstanceLoadBalancer(

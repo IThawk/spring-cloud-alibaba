@@ -127,6 +127,7 @@ sh seata-server.sh -p 8091 -m file
 ```$xslt
 http://127.0.0.1:18081/seata/feign
 
+//调用服务接口 验证分布式事务
 http://127.0.0.1:18081/seata/rest
 ```
 

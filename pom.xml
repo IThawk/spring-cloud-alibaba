@@ -20,67 +20,9 @@
     <description>Spring Cloud Alibaba</description>
     <url>https://github.com/alibaba/spring-cloud-alibaba</url>
 
-    <licenses>
-        <license>
-            <name>Apache License, Version 2.0</name>
-            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-
-    <scm>
-        <url>https://github.com/alibaba/spring-cloud-alibaba</url>
-        <connection>
-            scm:git:git://github.com/alibaba/spring-cloud-alibaba.git
-        </connection>
-        <developerConnection>
-            scm:git:ssh://git@github.com/alibaba/spring-cloud-alibaba.git
-        </developerConnection>
-        <tag>HEAD</tag>
-    </scm>
-
-    <developers>
-        <developer>
-            <name>xiaojing</name>
-            <email>flystar32@163.com</email>
-        </developer>
-        <developer>
-            <name>Jim Fang</name>
-            <email>fangjian0423@gmail.com</email>
-            <organization>Alibaba</organization>
-            <url>https://github.com/fangjian0423</url>
-        </developer>
-        <developer>
-            <name>xiaolongzuo</name>
-            <email>150349407@qq.com</email>
-        </developer>
-        <developer>
-            <name>hengyunabc</name>
-            <email>hengyunabc@gmail.com</email>
-        </developer>
-        <developer>
-            <id>mercyblitz</id>
-            <name>Mercy Ma</name>
-            <email>mercyblitz@gmail.com</email>
-            <organization>Alibaba</organization>
-            <url>https://github.com/mercyblitz</url>
-        </developer>
-        <developer>
-            <name>yunzheng</name>
-            <email>yunzheng1228@gmail.com</email>
-        </developer>
-        <developer>
-            <id>theonefx</id>
-            <name>theonefx</name>
-            <email>chenxilzx1@gmail.com</email>
-            <organization>Alibaba</organization>
-            <url>https://github.com/theonefx</url>
-        </developer>
-    </developers>
-
     <properties>
         <!-- Project revision -->
-        <revision>2.2.3-SNAPSHOT</revision>
+        <revision>2.2.3.SNAPSHOT</revision>
 
         <!-- Dependency Versions -->
         <spring-cloud-commons.version>2.2.5.RELEASE</spring-cloud-commons.version>
@@ -314,7 +256,9 @@
                         </goals>
                         <configuration>
                             <!-- Checkstyle rules inherited from spring-cloud-build -->
-                            <suppressionsLocation>${session.executionRootDirectory}/eclipse/checkstyle-suppressions.xml</suppressionsLocation>
+                            <suppressionsLocation>
+                                ${session.executionRootDirectory}/eclipse/checkstyle-suppressions.xml
+                            </suppressionsLocation>
                             <includeTestSourceDirectory>true</includeTestSourceDirectory>
                             <consoleOutput>true</consoleOutput>
                             <failsOnError>true</failsOnError>
@@ -367,22 +311,6 @@
                         <goals>
                             <goal>clean</goal>
                         </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.9</version>
-                <executions>
-                    <execution>
-                        <id>attach-javadocs</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                        <configuration>
-                            <additionalparam>-Xdoclint:none</additionalparam>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>

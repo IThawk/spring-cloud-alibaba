@@ -45,6 +45,9 @@ public class BusinessApplication {
 		return new RestTemplate();
 	}
 
+	/**
+	 * 调用storage-service 服务
+	 */
 	@FeignClient("storage-service")
 	public interface StorageService {
 

@@ -60,9 +60,9 @@ public class TestController {
 	// }
 
 	/**
-	 * 使用 RestTemplate 进行服务调用
-	 * @param str
-	 * @return
+	 * 使用 RestTemplate 进行服务调用.
+	 * @param str 输入.
+	 * @return .
 	 */
 	@GetMapping("/echo-rest/{str}")
 	public String rest(@PathVariable String str) {
@@ -86,8 +86,8 @@ public class TestController {
 	}
 
 	/**
-	 * 使用feign接口调用，在接口中去申明调用服务
-	 * @return
+	 * 使用feign接口调用，在接口中去申明调用服务.
+	 * @return string.
 	 */
 	@GetMapping("/notFound-feign")
 	public String notFound() {

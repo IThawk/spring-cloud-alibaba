@@ -14,6 +14,7 @@
     <packaging>jar</packaging>
 
     <dependencies>
+        <!-- seata分布式事务调用-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-seata</artifactId>

@@ -63,10 +63,16 @@ public class HomeController {
 		this.storageService = storageService;
 	}
 
+
+	/**
+	 * REST 调用方法
+	 * @return
+	 */
 	@GlobalTransactional(timeoutMills = 300000, name = "spring-cloud-demo-tx")
 	@GetMapping(value = "/seata/rest", produces = "application/json")
 	public String rest() {
 
+		//调用仓库服务
 		String result = restTemplate.getForObject(
 				"http://127.0.0.1:18082/storage/" + COMMODITY_CODE + "/" + ORDER_COUNT,
 				String.class);
@@ -102,6 +108,10 @@ public class HomeController {
 		return SUCCESS;
 	}
 
+	/**
+	 * openFeign 远程调用
+	 * @return
+	 */
 	@GlobalTransactional(timeoutMills = 300000, name = "spring-cloud-demo-tx")
 	@GetMapping(value = "/seata/feign", produces = "application/json")
 	public String feign() {

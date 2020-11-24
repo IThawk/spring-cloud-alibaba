@@ -43,6 +43,12 @@ public class StorageController {
 		this.jdbcTemplate = jdbcTemplate;
 	}
 
+	/**
+	 * 仓库服务
+	 * @param commodityCode
+	 * @param count
+	 * @return
+	 */
 	@GetMapping(value = "/storage/{commodityCode}/{count}", produces = "application/json")
 	public String echo(@PathVariable String commodityCode, @PathVariable int count) {
 		LOGGER.info("Storage Service Begin ... xid: " + RootContext.getXID());

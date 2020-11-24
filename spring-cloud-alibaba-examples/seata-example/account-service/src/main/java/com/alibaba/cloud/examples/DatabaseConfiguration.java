@@ -27,6 +27,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 /**
+ *
  * @author xiaojing
  */
 @Configuration

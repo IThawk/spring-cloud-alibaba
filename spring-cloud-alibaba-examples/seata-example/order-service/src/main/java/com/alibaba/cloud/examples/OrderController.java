@@ -73,6 +73,7 @@ public class OrderController {
 
 		int orderMoney = calculate(commodityCode, orderCount);
 
+		//账户服务
 		invokerAccountService(orderMoney);
 
 		final Order order = new Order();
@@ -101,9 +102,10 @@ public class OrderController {
 
 		order.id = keyHolder.getKey().longValue();
 
-		if (random.nextBoolean()) {
-			throw new RuntimeException("this is a mock Exception");
-		}
+		//设置随机成功
+//		if (random.nextBoolean()) {
+//			throw new RuntimeException("this is a mock Exception");
+//		}
 
 		LOGGER.info("Order Service End ... Created " + order);
 
