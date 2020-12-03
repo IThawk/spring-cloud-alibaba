@@ -63,7 +63,6 @@ public class HomeController {
 		this.storageService = storageService;
 	}
 
-
 	/**
 	 * REST 调用方法
 	 * @return
@@ -72,7 +71,7 @@ public class HomeController {
 	@GetMapping(value = "/seata/rest", produces = "application/json")
 	public String rest() {
 
-		//调用仓库服务
+		// 调用仓库服务
 		String result = restTemplate.getForObject(
 				"http://127.0.0.1:18082/storage/" + COMMODITY_CODE + "/" + ORDER_COUNT,
 				String.class);
